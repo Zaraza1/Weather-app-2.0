@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+}
+
+.weather-container{
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 2%;
+    background-color: #333;
+    color: #fafafa;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* current  */
+
+.weather-container .current{
+    /* background: rgb(30,107,221); */
+    width: 25%;
+    background: linear-gradient( 45deg, rgb(30,107,221) 0%,
+    rgb(3,116,255) 42%,
+    rgb(3,191,255) 100%);
+    /* border-radius: 40px; */
+    padding: 40px;
+}
+
+.weather-container .current .city{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.weather-container .current .day{
+    text-align: center;
+}
+
+.weather-container .current .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-container .current .row .icon img{
+    width: 128px;
+}
+
+.weather-container .current .row .temperature{
+    font-size: 48px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.weather-container .current .row .temperature-now{
+    font-size: 60px;
+}
+
+.weather-container .current .row .temperature-low{
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.weather-container .current .row .status{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.weather-container .current .more{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.weather-container .current .item .icon span{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.weather-container .current .item .type{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* forecast  */
+
+.weather-container .forecast{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 50px 40px;
+}
+
+.weather-container .forecast .day{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.weather-container .forecast .day .name{
+    width: 100%;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.weather-container .forecast .day .weather{
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.weather-container .forecast .material-symbols-outlined {
+    font-size: 50px;
+}
+
+.weather-container .forecast .day .temperature{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+/* ---------------------------------
+        Responsive design
+--------------------------------- */
+
+@media screen and (max-width: 480px){
+    .weather-container{
+        width: 90%;
+        flex-direction: column;
+        margin: 10vw auto;  
+        border-radius: 50px;
+    }
+
+    /* This selector targets elements with the class .current that are descendants of elements
+    with the class .weather-container*/
+    .weather-container .current{
+        width: 95%;
+        border-radius: 40px;
+        padding: 5vw 0;
+        margin-top: 2vw;
+    }
+
+    /*This selector targets elements with the class .row that are descendants of elements with the class
+    .current, which in turn are descendants of elements with the class .weather-container*/
+    .weather-container .current .row{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .weather-container .current .row .icon img{
+        width: 60px;
+    }
+
+    .weather-container .current .row .temperature-now{
+        font-size: 60%;
+    }
+
+    .weather-container .current .row .temperature-low{
+        font-size: 40%;
+    }
+
+    .weather-container .current .more{
+        justify-content: space-around;
+    }
+
+    .weather-container .forecast{
+        flex-direction: column;
+    }
+
+    .weather-container .forecast .day{
+        flex-direction: row;
+    }
+    
+    .weather-container .forecast .day .name{
+        font-size: 8vw;
+    }
+    .weather-container .forecast .material-symbols-outlined {
+        font-size: 40px;
+    }
+}

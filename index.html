@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link to google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />    
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather Widget</title>
+</head>
+<body>
+    <div class="weather-container">
+        
+        <!-- current weather  -->
+        <div class="current">
+            <div class="city"></div>
+            <div class="day"></div>
+            <div class="row">
+                <!-- image  -->
+                <div class="icon" >
+                    <img id="icon1" src="" width="128" >
+                </div>
+                <div class="info">
+                    <div class="temperature">
+                        <div class="temperature-now"></div>
+                        <div class="temperature-low"></div>
+                    </div>
+                    <div class="status"></div>
+                </div>
+            </div>
+            <div class="more">
+                <!-- item 1 -->
+                <div class="item">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">air</span>
+                    </div>
+                    <div class="text">
+                        <div class="value" id="wind"></div>
+                        <div class="type">Wind</div>
+                    </div>
+                </div>
+                <!-- item 2 -->
+                <div class="item">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">water_drop</span>
+                    </div>
+                    <div class="text">
+                        <div class="value" id="drop"></div>
+                        <div class="type">Precipitation</div>
+                    </div>
+                </div>
+                <!-- item 3 -->
+                <div class="item">
+                    <div class="icon">
+                        <span class="material-symbols-outlined">water</span>
+                    </div>
+                    <div class="text">
+                        <div class="value" id="humidity"></div>
+                        <div class="type">Humidity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Forecast weather  -->
+        <div class="forecast">
+            <!-- day-1  -->
+            <div class="day">
+                <div class="name"></div>
+                <div class="weather">
+                    <div class="icon">
+                        <img src="" alt="" class="img-forecast">
+                    </div>
+                    <div class="status forecast-status"></div>
+                </div>
+                <div class="temperature">
+                    <div class="temperature-avg"></div>
+                </div>
+            </div>
+            <!-- day-2  -->
+            <div class="day">
+                <div class="name"></div>
+                <div class="weather">
+                    <div class="icon">
+                        <img src="" alt="" class="img-forecast">
+                    </div>
+                    <div class="status forecast-status"></div>
+                </div>
+                <div class="text-center temperature">
+                    <div class="temperature-avg"></div>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+            <script src="script.js"></script>
+</body>
+</html>
